@@ -30,4 +30,7 @@
     .drawer {
         @apply fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800
     }
+    .card {
+        @apply rounded-2xl border-2 border-gray-100
+    }
 }
