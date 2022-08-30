@@ -9,6 +9,12 @@
     .secondary {
         @apply bg-secondary hover:bg-slate-300 text-black focus:ring-1 
     }
+    .dashboard-menu {
+        @apply py-3 px-8 rounded-md font-medium hover:bg-slate-200 text-gray-500
+    }
+    .active-dashboard-menu {
+        @apply bg-primary text-white hover:bg-blue-700
+    }
     .revenue-circular-stroke {
         @apply bg-success
     }
@@ -20,5 +26,8 @@
     }
     .circular-stroke {
         @apply bg-secondary
+    }
+    .drawer {
+        @apply fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800
     }
 }
