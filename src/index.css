@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .primary {
+        @apply bg-primary hover:bg-blue-800 focus:ring-1
+    }
+    .secondary {
+        @apply bg-secondary hover:bg-slate-300 text-black focus:ring-1 
+    }
+    .revenue-circular-stroke {
+        @apply bg-success
+    }
+    .escrow-circular-stroke {
+
+    }
+    .sales-circular-stroke {
+
+    }
+    .circular-stroke {
+        @apply bg-secondary
+    }
+}
