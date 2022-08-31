@@ -4,12 +4,16 @@
       <div>
         <h2 class="font-medium text-gray-800">{{ title ? title : "title" }}</h2>
         <div class="text-3xl font-bold text-gray-800">
-          ${{ value ? value : "0" }}K
+          ${{ value === 99 ? `${value}+` : value < 99 ? value : "0" }}K
         </div>
-        <small>We have sold 123 items</small>
+        <small v-if="sales">We have sold {{ sales }} item(s)</small>
+        <small v-else>Available to payout</small>
       </div>
       <div>
-        <circular-progress :color="color" value="20"></circular-progress>
+        <circular-progress
+          :color="color"
+          :value="value === 99 ? 100 : value"
+        ></circular-progress>
       </div>
     </div>
   </div>
@@ -18,7 +22,7 @@
 import CircularProgress from "../atoms/CircularProgress.vue";
 export default {
   name: "SalesCard",
-  props: ["title", "value", 'color'],
+  props: ["title", "value", "color", "sales"],
   components: { CircularProgress },
 };
 </script>

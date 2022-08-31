@@ -5,7 +5,7 @@
       :stop-color="color"
       inner-stroke-color="#f4f4f4"
       :total-steps="100"
-      :completed-steps="90.9"
+      :completed-steps="value"
       :inner-stroke-width="5"
       :stroke-width="5"
       :diameter="90"
