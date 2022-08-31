@@ -7,13 +7,17 @@
     }`"
     class="focus:ring-2 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
   >
-    Default
+    {{ text ? text : "Button" }}
   </button>
   <!-- </div> -->
 </template>
 <script>
 export default {
   props: {
+    text: {
+      type: String,
+      default: "Button",
+    },    
     dark: {
       type: Boolean,
       default: false,
