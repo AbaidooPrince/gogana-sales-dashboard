@@ -24,24 +24,31 @@
         </div>
       </div>
     </div>
-    <!-- ... -->
-    <div></div>
+
+    <div class="grid grid-cols-12 gap-8">
+      <div class="md:col-span-8">
+        <div class="">
+          <go-bar-chart></go-bar-chart>
+        </div>
+      </div>
+      <!-- <bar-chart-bar></bar-chart-bar> -->
+      <div>Pie chart</div>
+    </div>
     <div class="">
       <div class="card">
         <div class="flex justify-between align-middle p-4">
           <div>
             <div class="font-medium text-xl">Total Revenue</div>
             <div class="flex gap-2 align-baseline">
-                <div class="font-medium text-3xl text-gray-800">
-                    $50.4K
-                </div>
-                <div>
-                    <small class="text-green-700 font-semibold">8% than last month </small>
-                </div>
+              <div class="font-medium text-3xl text-gray-800">$50.4K</div>
+              <div>
+                <small class="text-green-700 font-semibold"
+                  >8% than last month
+                </small>
+              </div>
             </div>
-
           </div>
-        
+
           <div class="flex align-middle gap-2">
             <small class="my-auto">Data updates every 3 hours</small>
             <GoButton color="secondary" text="View All Orders"></GoButton>
@@ -71,6 +78,8 @@ import { useStore } from "../stores/index";
 import SalesCard from "../components/SalesCard.vue";
 import SimpleTable from "../atoms/SimpleTable.vue";
 import GoButton from "../atoms/GoButton.vue";
+import BarChartBar from "../atoms/BarChartBar.vue";
+import GoBarChart from "../components/GoBarChart.vue";
 export default {
   setup() {
     const salesSummary = useStore().salesSummary;
@@ -92,7 +101,7 @@ export default {
     };
   },
 
-  components: { SalesCard, SimpleTable, GoButton },
+  components: { SalesCard, SimpleTable, GoButton, BarChartBar, GoBarChart },
   computed: {
     // orders() {
     //   return this.orders;
