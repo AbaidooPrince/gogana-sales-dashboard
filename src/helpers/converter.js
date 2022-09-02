@@ -14,5 +14,8 @@ export const convertToBar = (num) => {
     return "h-4";
   } else if (toK > 10 && toK <= 20) {
     return "h-1/5";
+  } else if (toK > 20 && toK <= 50) {
+    return "h-2/5";
   }
+  return "h-3/5";
 };

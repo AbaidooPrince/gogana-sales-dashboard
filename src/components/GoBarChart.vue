@@ -5,7 +5,7 @@
     </div>
     <div class="grid grid-cols-7 gap-8 w-full">
       <div>
-        <bar-chart-bar key="9" :level="convert(80)"></bar-chart-bar>
+        <bar-chart-bar key="9" :level="convert(15)"></bar-chart-bar>
         <div>Sun</div>
       </div>
       <div>
@@ -15,6 +15,23 @@
       <div>
         <bar-chart-bar key="3" :level="convert(70)"></bar-chart-bar>
         <div>Tue</div>
+      </div>
+      <div>
+        <bar-chart-bar key="3" :level="convert(30)"></bar-chart-bar>
+        <div>Wed</div>
+      </div>
+      <div>
+        <bar-chart-bar key="3" :level="convert(19)"></bar-chart-bar>
+        <div>Thu</div>
+      </div>
+      <div>
+        <bar-chart-bar key="3" :level="convert(30)"></bar-chart-bar>
+        <div>Fri</div>
+      </div>
+
+      <div>
+        <bar-chart-bar key="3" :level="convert(30)"></bar-chart-bar>
+        <div>Sat</div>
       </div>
     </div>
   </div>
